@@ -34,18 +34,23 @@ export default function SignIn() {
   };
 
   const handleManualSignIn = async (e) => {
-    e.preventDefault();
-
+  e.preventDefault();
+  try {
     const response = await signIn("credentials", {
       email,
       username,
       callbackUrl: "/blogs",
     });
-
     if (response?.url) {
-      router.push(response.url); // Redirect to blogs page
+      router.push(response.url);
+    } else {
+      throw new Error("Sign-in failed");
     }
-  };
+  } catch (error) {
+    alert("Sign-in failed. Please try again.");
+  }
+};
+
 
   const providerLogos = {
     google: (

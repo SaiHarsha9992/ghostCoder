@@ -113,6 +113,9 @@ export default function Header() {
           <a href="/contact" className="block hover:text-gray-300">
             Contact
           </a>
+<a href="/blogs" className="block hover:text-gray-300">
+            Blogs
+          </a>
         </div>
       )}
     </nav>

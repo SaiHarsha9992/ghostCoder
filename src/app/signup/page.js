@@ -23,6 +23,16 @@ export default function SignIn() {
     fetchProviders();
   }, []);
 
+  const handleSignIn = async (providerId) => {
+    const response = await signIn(providerId, {
+      callbackUrl: "/blogs", // Redirect to /blogs after successful login
+    });
+
+    if (response?.url) {
+      router.push(response.url); // Ensure redirection after successful login
+    }
+  };
+
   const handleManualSignIn = async (e) => {
   e.preventDefault();
   try {

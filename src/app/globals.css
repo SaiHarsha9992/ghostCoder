@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Give+You+Glory&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Apply global styles */
 html,
 body {
-  @apply bg-[#1a2629] text-white min-h-screen;
+  @apply bg-[#1a2629] text-white min-h-screen font-sans; /* Use Tailwind's font-sans utility */
 }

@@ -92,12 +92,12 @@ export default function Home() {
         </div>
         {showImage && (
           <button className="mt-auto mb-8 px-6 py-2 text-lg font-semibold text-black bg-white rounded-lg hover:bg-gray-200 transition duration-1300 z-10 animate-rise shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#fff,0_0_15px_#fff,0_0_30px_#fff]">
-            Explore &apos;GhostCoder&apos;
+            <a href="/blogs">Explore GhostCoder</a>
           </button>
         )}
       </div>
 
-      <div className="mt-12 bg-[#1a2629] h-[400vh] w-100">
+      <div className="mt-12 bg-[#1a2629] w-full min-h-screen lg:min-h-[400vh]">
         <Header />
 
         <div
@@ -178,74 +178,74 @@ export default function Home() {
             highlights of being a part of GhostCoder's vibrant community:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
             <div className="bg-[#2a3d41] p-6 rounded-lg shadow-2xl hover:scale-105 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-semibold text-white mb-4">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4">
                 🌱 Learning Together
               </h3>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
                 Join interactive study groups and coding challenges. Share your
                 learning journey and help others succeed as you go.
               </p>
             </div>
             <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-semibold text-white mb-4">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4">
                 💬 Peer Support
               </h3>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
                 Whether you're stuck on a problem or need advice, our community
                 forums and chat channels are full of fellow coders ready to
                 help!
               </p>
             </div>
             <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-semibold text-white mb-4">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4">
                 🤝 Collaboration Opportunities
               </h3>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
                 Team up with other developers to build projects, share
                 knowledge, and explore innovative ideas together.
               </p>
             </div>
             <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-semibold text-white mb-4">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4">
                 🎓 Mentorship
               </h3>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
                 Get guidance from experienced developers and industry
                 professionals who are eager to help you grow and succeed.
               </p>
             </div>
             <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-semibold text-white mb-4">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4">
                 📢 Knowledge Sharing
               </h3>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
                 Share your expertise through blog posts, tutorials, and videos,
                 and build your presence in the coding community.
               </p>
             </div>
             <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-semibold text-white mb-4">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4">
                 🌍 Global Network
               </h3>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
                 Connect with like-minded coders from around the world, exchange
                 ideas, and gain a global perspective on coding practices.
               </p>
             </div>
             {/* New WhatsApp Card */}
-            <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 col-start-2 ">
-              <h3 className="text-2xl font-semibold text-white mb-4">
+            <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 col-span-1 sm:col-span-2 lg:col-span-1 lg:col-start-2">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4">
                 📲 Join Our WhatsApp Group
               </h3>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
                 Stay connected with fellow coders and community members. Join
                 our WhatsApp group for instant updates, discussions, and
                 support!
               </p>
               <a
-                href="https://wa.me/yourwhatsapplink"
+                href="https://chat.whatsapp.com/CsJaeOesHUJ889XoBMqL4C"
                 className="inline-block mt-4 text-xl font-semibold text-green-500 hover:text-green-400"
                 target="_blank"
                 rel="noopener noreferrer"

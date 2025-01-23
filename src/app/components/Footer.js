@@ -80,12 +80,7 @@ export default function Footer() {
 
           {/* Legal Notice */}
           <div className="mt-6">
-            <p className="text-sm text-gray-300">
-              &copy; {new Date().getFullYear()} GhostCoder. All rights reserved.
-            </p>
-            <p className="text-sm text-gray-300">
-              Privacy Policy | Terms of Service
-            </p>
+            <p className="text-sm text-gray-300">&copy; ghostCoder.</p>
           </div>
         </div>
       </div>

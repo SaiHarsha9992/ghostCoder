@@ -28,18 +28,15 @@ const BlogPage = () => {
   return (
     <div className="bg-[#1a2629] text-[#e5e5e5] min-h-screen">
       <Header />
-      <div className="relative" style={{ height: "100vh" }}>
+      <div className="relative w-full px-4 py-8 max-w-screen-lg mx-auto">
         <iframe
           src={blog.embedFile}
-          width="100%"
-          height="100%"
+          aria-hidden="true"
           allow="autoplay"
-          className="border rounded"
+          className="w-full h-[70vh] md:h-[80vh] lg:h-[90vh] border rounded-2xl mx-auto shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#fff,0_0_15px_#fff,0_0_30px_#fff]"
           title="Blog Content"
-          style={{ border: "none", height: "100vh", width: "100%" }}
         ></iframe>
       </div>
-
       <Footer />
     </div>
   );

@@ -21,6 +21,7 @@ const BlogPage = () => {
   const [textContent, setTextContent] = useState("");
   const [isSpeaking, setIsSpeaking] = useState(false); // Track speaking state
   const [speechIndex, setSpeechIndex] = useState(0); // Track current position in the text
+  const [isMobile, setIsMobile] = useState(false); // Track if user is on mobile
 
   useEffect(() => {
     const fetchContent = async () => {
@@ -42,6 +43,13 @@ const BlogPage = () => {
     };
 
     fetchContent();
+
+    // Check screen width to determine if the user is on a mobile device
+    const checkIsMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkIsMobile(); // Check on initial render
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
   }, [blog]);
 
   const handleReadText = () => {
@@ -118,26 +126,28 @@ const BlogPage = () => {
           title="Blog Content"
         ></iframe>
 
-        {/* Buttons to trigger text-to-speech */}
-        <div className="fixed top-1/2 right-4 flex flex-col space-y-4 sm:space-y-2 sm:right-2">
-          <button
-            onClick={handleReadText}
-            className={`px-4 py-2 rounded-md shadow-lg text-xs sm:text-sm ${
-              isSpeaking
-                ? "bg-red-600 hover:bg-red-700"
-                : "bg-blue-600 hover:bg-blue-700"
-            } text-white`}
-          >
-            {isSpeaking ? "Stop Reading" : "Read Aloud"}
-          </button>
+        {/* Conditionally render buttons based on isMobile */}
+        {!isMobile && (
+          <div className="fixed top-1/2 right-4 flex flex-col space-y-4 sm:space-y-2 sm:right-2">
+            <button
+              onClick={handleReadText}
+              className={`px-4 py-2 rounded-md shadow-lg text-xs sm:text-sm ${
+                isSpeaking
+                  ? "bg-red-600 hover:bg-red-700"
+                  : "bg-blue-600 hover:bg-blue-700"
+              } text-white`}
+            >
+              {isSpeaking ? "Stop Reading" : "Read Aloud"}
+            </button>
 
-          <button
-            onClick={handleReadFromStart}
-            className="px-4 py-2 rounded-md shadow-lg bg-green-600 hover:bg-green-700 text-xs sm:text-sm text-white"
-          >
-            Start from First
-          </button>
-        </div>
+            <button
+              onClick={handleReadFromStart}
+              className="px-4 py-2 rounded-md shadow-lg bg-green-600 hover:bg-green-700 text-xs sm:text-sm text-white"
+            >
+              Start from First
+            </button>
+          </div>
+        )}
       </div>
       <Footer />
     </div>

@@ -9,7 +9,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#040709] fixed w-full z-20 top-0 start-0 sticky">
+    <nav className="bg-[#040709] fixed w-full z-20 top-0 start-0 sticky hover:shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#fff,0_0_15px_#fff,0_0_30px_#fff]">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         {/* Logo Section */}
         <a href="/" className="flex items-center space-x-3">

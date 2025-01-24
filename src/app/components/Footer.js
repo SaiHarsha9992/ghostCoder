@@ -7,9 +7,9 @@ export default function Footer() {
           <div>
             <p className="text-xl font-semibold">Contact Us</p>
             <p className="text-lg text-gray-300">
-              Email: gaduharsha72@gmail.com
+              Email: gaduharsha72@gmail.com, shanmukh0016@gmail.com
             </p>
-            <p className="text-lg text-gray-300">Phone: +91 83749 39447</p>
+            <p className="text-lg text-gray-300">Phone: +91 83749 39447, +91 90631 68947</p>
           </div>
 
           {/* Social Media Links */}

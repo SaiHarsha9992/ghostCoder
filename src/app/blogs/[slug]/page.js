@@ -12,6 +12,12 @@ const blogs = {
     content:
       "https://docs.google.com/document/d/e/2PACX-1vSl6EgBVhjGyJR9bksPmjlSK6rsLKrp3P3UJLASKEHfybmOITPlLEdcLs-4W3DQSTS7rz4iVYaZWLNw/pub?embedded=true",
   },
+  "forloop":{
+    embedFile:
+      "https://docs.google.com/document/d/1ZaX0WuDXFO47_cqEPjynLoq4pSZJx8qfo7V6DzEF5do/preview",
+    content:
+      "https://docs.google.com/document/d/e/2PACX-1vR8DbjQeeahwc6DH-o4n_Y-TghnPhgDxyHdaaQn5-rJNLLQnOzbh3V8M7T28EjGxvwY5s998flKKdin/pub?embedded=true",
+  },
 };
 
 const BlogPage = () => {

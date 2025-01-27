@@ -13,8 +13,15 @@ const BlogPage = () => {
       id: 1,
       title: "Basics Of Coding",
       description:
-        "In this we explain coding with step-by-step examples and code snippets in Python, C++, and Java.",
+        "In this, we explain coding with step-by-step examples and code snippets in Python, C++, and Java.",
       link: "/blogs/basics-of-coding",
+    },
+    {
+      id: 2,
+      title: "For Loop",
+      description: 
+        "In this, we explain about for loop with step-by-step examples and code snippets in Python, cpp, and Java",
+      link: "/blogs/forloop",
     },
   ];
 

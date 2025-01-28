@@ -128,7 +128,7 @@ const BlogPage = () => {
           src={blog.embedFile}
           aria-hidden="true"
           allow="autoplay"
-          className="w-full h-[50vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] border rounded-2xl mx-auto shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#fff,0_0_15px_#fff,0_0_30px_#fff]"
+          className="w-full h-[80vh] sm:h-[100vh] md:h-[80vh] lg:h-[90vh] border rounded-2xl mx-auto shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#fff,0_0_15px_#fff,0_0_30px_#fff]"
           title="Blog Content"
         ></iframe>
 

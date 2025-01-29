@@ -16,13 +16,36 @@ const BlogPage = () => {
         "In this, we explain coding with step-by-step examples and code snippets in Python, C++, and Java.",
       link: "/blogs/basics-of-coding",
     },
+
+{
+    id: 2,
+    title: "Basic Syntax and Data Types",
+    description:
+      "Understand the basic syntax in programming languages and the different data types such as integers, floats, strings, and booleans.",
+    link: "/blogs/basic-syntax-and-data-types",
+  },
+  {
+    id: 3,
+    title: "Operators and Expressions",
+    description:
+      "Learn about arithmetic, comparison, logical, and assignment operators, and how to use them in programming languages.",
+    link: "/blogs/operators-and-expressions",
+  },
+  {
+    id: 4,
+    title: "Condition Statements",
+    description:
+      "Explore decision-making statements (if-else) to control the flow of your program.",
+    link: "/blogs/condition-statements",
+  },
     {
-      id: 2,
+      id: 5,
       title: "For Loop",
       description: 
         "In this, we explain about for loop with step-by-step examples and code snippets in Python, cpp, and Java",
       link: "/blogs/forloop",
     },
+
   ];
 
   const { data: session } = useSession();

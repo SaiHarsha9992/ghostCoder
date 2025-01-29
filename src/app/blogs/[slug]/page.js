@@ -12,6 +12,26 @@ const blogs = {
     content:
       "https://docs.google.com/document/d/e/2PACX-1vSl6EgBVhjGyJR9bksPmjlSK6rsLKrp3P3UJLASKEHfybmOITPlLEdcLs-4W3DQSTS7rz4iVYaZWLNw/pub?embedded=true",
   },
+  "basic-syntax-and-data-types":{
+    embedFile:
+      "https://docs.google.com/document/d/1DND8eWqbkRW5TYV5FrpN3UBiLhzzESHwUjDkZF2heg8/preview",
+    content:
+      "https://docs.google.com/document/d/e/2PACX-1vSpwINQqYHSSP8OKCfsV81wpxyJ7WYEHpF3AUszsdkVxdP_ke6OmpriI1heOzG9LLigtYfCFb_l8riE/pub?embedded=true",
+  },
+
+  "operators-and-expressions":{
+    embedFile:
+      "https://docs.google.com/document/d/1bsmQaEd0-i-rgkeg1GBB_DjNnzpGHCEd-9-SawoFsdI/preview",
+    content:
+      "https://docs.google.com/document/d/e/2PACX-1vQCDMjOO8Ls2RzmCKnCcIMdBdxurhlBw0EhoPUPwlHzbBRTcc06ZL7aKrRyoum4PB1CybhLKHgQXeb5/pub?embedded=true",
+  },
+  "condition-statements":{
+    embedFile:
+      "https://docs.google.com/document/d/1kIXmvg8aOa4kQ3OvWya47qM_HGRy_tqpqsrlNhvkgk4/preview",
+    content:
+      "https://docs.google.com/document/d/e/2PACX-1vSMnx_73qODhqL-b9J3B9S6Mn5QZKENLE-smvxfRkdKMX5S7cYiLqxr5La_Yf5NS2pWVgyK-LkvBa8e/pub?embedded=true",
+  },
+
   "forloop":{
     embedFile:
       "https://docs.google.com/document/d/1ZaX0WuDXFO47_cqEPjynLoq4pSZJx8qfo7V6DzEF5do/preview",

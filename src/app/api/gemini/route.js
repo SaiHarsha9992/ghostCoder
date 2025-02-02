@@ -16,13 +16,17 @@ export async function POST(req) {
       { headers: { "Content-Type": "application/json" } }
     );
 
+    console.log(response.data); // Log full response for debugging
+
     return NextResponse.json({
       content: response.data.candidates[0]?.content.parts[0]?.text,
     });
   } catch (error) {
-    console.error("Error fetching Gemini response:", error);
+    // Enhanced error logging
+    console.error("Error fetching Gemini response:", error.response?.data || error.message);
+
     return NextResponse.json(
-      { error: "Failed to fetch response" },
+      { error: "Failed to fetch response", details: error.message },
       { status: 500 }
     );
   }

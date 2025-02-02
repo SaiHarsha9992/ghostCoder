@@ -24,7 +24,7 @@ export default function CodingAssistant() {
     setInput("");
 
     const instruction =
-      "Provide a code example and explanation for the following question:";
+      "Your name is ghostCoder, Provide a code example and explanation for the following question:";
 
     const prompt = `${instruction} ${input}`;
 

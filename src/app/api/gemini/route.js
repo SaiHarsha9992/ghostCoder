@@ -4,7 +4,7 @@ import axios from "axios";
 export async function POST(req) {
   try {
     const { messages } = await req.json();
-    const API_KEY = "AIzaSyDROfm4SqoN-8rnYOnCSGaQnEELnjddKRQ";
+    const API_KEY = process.env.GEMINI_API;
 
     const response = await axios.post(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`,

@@ -5,8 +5,11 @@ export async function middleware(req) {
   // Get the session or token from cookies
   const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
 
-  // If no token or session exists, redirect to signin
-  if (!token && req.nextUrl.pathname.startsWith("/blogs")) {
+  if (
+    !token &&
+    (req.nextUrl.pathname.startsWith("/blogs") ||
+      req.nextUrl.pathname.startsWith("/assistant"))
+  ) {
     return NextResponse.redirect(new URL("/signin", req.url));
   }
 
@@ -14,5 +17,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: ["/blogs/:path*"], // Protect '/blogs' and any sub-routes
+  matcher: ["/blogs/:path*", "/assistant/:path*"],
 };

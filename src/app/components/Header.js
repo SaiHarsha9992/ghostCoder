@@ -59,6 +59,9 @@ export default function Header() {
           <a href="/blogs" className="text-white hover:text-gray-300">
             Blogs
           </a>
+          <a href="/assistant" className="text-white hover:text-gray-300">
+            Assistant
+          </a>
         </div>
 
         {/* User Section */}
@@ -110,11 +113,11 @@ export default function Header() {
           <a href="/services" className="block hover:text-gray-300">
             Services
           </a>
+          <a href="/assistant" className="block hover:text-gray-300">
+            Assistant
+          </a>
           <a href="/contact" className="block hover:text-gray-300">
             Contact
-          </a>
-<a href="/blogs" className="block hover:text-gray-300">
-            Blogs
           </a>
         </div>
       )}

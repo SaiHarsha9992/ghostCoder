@@ -144,12 +144,12 @@ export default function CodingAssistant() {
               </div>
             ))}
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-col sm:flex-row">
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyPress}
-              className="flex-grow p-2 border border-gray-600 bg-[#1a2629] text-white focus:shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#fff,0_0_15px_#fff,0_0_30px_#fff] rounded"
+              className="flex-grow p-2 border border-gray-600 bg-[#1a2629] text-white focus:ring-2 focus:ring-white rounded mb-2 sm:mb-0"
               placeholder="Ask a coding question..."
               disabled={loading}
               rows={3}

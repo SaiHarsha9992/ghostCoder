@@ -38,6 +38,19 @@ const blogs = {
     content:
       "https://docs.google.com/document/d/e/2PACX-1vR8DbjQeeahwc6DH-o4n_Y-TghnPhgDxyHdaaQn5-rJNLLQnOzbh3V8M7T28EjGxvwY5s998flKKdin/pub?embedded=true",
   },
+  "while-and-do-while-loops":{
+    embedFile:
+      "https://docs.google.com/document/d/1BQUz_eFu5MacgfYgrkixVymkp_rdNZNHsk8LkVjKAC4/preview",
+    content:
+      "https://docs.google.com/document/d/e/2PACX-1vTs6pWy3PnjJgugCl506ZYRuGbnkvVHCNVJ7gzGIpq6HcjKQaRjMxPyYxiLQdGNeHtCLeuOgf63OUV7/pub?embedded=true",
+  },
+
+  "functions":{
+    embedFile:
+      "https://docs.google.com/document/d/1AwfjTeaanBNUlad8AsE9G_jA_0y4MdHo7-43exnItEw/preview",
+    content:
+      "https://docs.google.com/document/d/e/2PACX-1vQBRQtAhaBMilSKeLaWNFSJnrF3FAypMFgMvIC_WbjAWBI8zGiFmFf4AVjXMJ-kP2jTC0bLLtZHlFvE/pub?embedded=true",
+  },
 };
 
 const BlogPage = () => {

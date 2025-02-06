@@ -45,6 +45,20 @@ const BlogPage = () => {
         "In this, we explain about for loop with step-by-step examples and code snippets in Python, cpp, and Java",
       link: "/blogs/forloop",
     },
+     {
+    id: 6,
+    title: "While and Do-While Loops",
+    description:
+      "In this blog, we cover the difference between While and Do-While loops with examples in Python, C++, and Java.",
+    link: "/blogs/while-and-do-while-loops",
+  },
+  {
+    id: 7,
+    title: "Functions",
+    description:
+      "Understand the concept of functions, how to declare, define, and call them, with examples in Python, C++, and Java.",
+    link: "/blogs/functions",
+  }
 
   ];
 

@@ -27,7 +27,7 @@ Open http://localhost:3000 in your browser.
 📖 Learn More
 To explore coding topics, check out:
 
-GhostCoder Blog: [[Your Website Link](https://ghost-coderr.vercel.app/)]
+GhostCoder Blog: [ghostCoder Blogs](https://ghost-coderr.vercel.app/blogs)
 Next.js Documentation: Next.js Docs
 🚀 Deploy on Vercel
 Deploy easily on Vercel:
@@ -37,8 +37,8 @@ Deploy Now
 We welcome contributions! Feel free to fork the repo, create a new branch, and submit a pull request.
 
 🌐 Connect with Us
-🔗 Website: [[Your Website Link](https://ghost-coderr.vercel.app/)]
-📢 Follow us on LinkedIn: [https://www.linkedin.com/in/g-kedarinadh-sai-harsha/]
+🔗 Website: [ghostCoder](https://ghost-coderr.vercel.app/)
+📢 Follow us on LinkedIn: [Linkedin](https://www.linkedin.com/in/g-kedarinadh-sai-harsha/)
 
 🚀 Happy Coding!
 

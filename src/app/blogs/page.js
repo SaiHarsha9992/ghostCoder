@@ -58,6 +58,13 @@ const BlogPage = () => {
     description:
       "Understand the concept of functions, how to declare, define, and call them, with examples in Python, C++, and Java.",
     link: "/blogs/functions",
+  },
+{
+    id: 8,
+    title: "Recursions",
+    description:
+      "Understand the concept of recursions, how to declare, define, and call them, with examples in Python, C++, and Java.",
+    link: "/blogs/recursions",
   }
 
   ];

@@ -51,6 +51,13 @@ const blogs = {
     content:
       "https://docs.google.com/document/d/e/2PACX-1vQBRQtAhaBMilSKeLaWNFSJnrF3FAypMFgMvIC_WbjAWBI8zGiFmFf4AVjXMJ-kP2jTC0bLLtZHlFvE/pub?embedded=true",
   },
+
+"recursions":{
+    embedFile:
+      "https://docs.google.com/document/d/19KxY2qSFUBN8nMv96ERupZ779Dej_pVAddru9pibKHs/preview",
+    content:
+      "https://docs.google.com/document/d/e/2PACX-1vSg3vuc6G2tFKc8GuHHKagjjA0aUiYn5KSvKq-FeZmw7YLjen64wuhSr5lF9mx1siglsbUTv-qYtkNH/pub?embedded=true",
+  },
 };
 
 const BlogPage = () => {

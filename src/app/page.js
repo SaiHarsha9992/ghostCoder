@@ -149,8 +149,8 @@ export default function Home() {
             What’s Next for GhostCoder?
           </h3>
           <p className="text-lg text-gray-300">
-            We're just getting started! In the near future, GhostCoder will
-            expand into:
+            We're just getting started! Shortly, GhostCoder will
+            Expand into:
           </p>
           <ul className="text-lg text-gray-300 space-y-5 mt-6">
             <li>✅ Placement training and interview preparation resources</li>

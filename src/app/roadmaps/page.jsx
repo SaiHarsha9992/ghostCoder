@@ -50,7 +50,7 @@ export default function RoadmapsPage() {
 
   return (
   <>
-    <Header/>
+    <Header className="w-full top-0"/>
     <div className="flex flex-col items-center min-h-screen bg-[#2a3d41] p-4 md:p-6">
       
       <div className="hidden lg:flex flex-col items-center justify-center text-center space-y-4 relative top-2">
@@ -113,7 +113,7 @@ export default function RoadmapsPage() {
       </Dialog>
     </div>
     
-    <Footer/>
+    <Footer className="w-full bottom-0"/>
 </>
   );
 }

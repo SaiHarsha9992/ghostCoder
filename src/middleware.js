@@ -8,7 +8,7 @@ export async function middleware(req) {
   if (
     !token &&
     (req.nextUrl.pathname.startsWith("/blogs") ||
-      req.nextUrl.pathname.startsWith("/assistant")) ||
+      req.nextUrl.pathname.startsWith("/assistant") ||
       req.nextUrl.pathname.startsWith("/roadmaps"))
   ) {
     return NextResponse.redirect(new URL("/signin", req.url));

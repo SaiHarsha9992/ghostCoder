@@ -49,7 +49,7 @@ const About = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Service 1 */}
-            <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg">
+            <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg hover:scale-105">
               <h3 className="text-xl font-semibold text-white mb-4">
                 DSA & Coding Tutorials
               </h3>
@@ -62,7 +62,7 @@ const About = () => {
             </div>
 
             {/* Service 2 */}
-            <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg">
+            <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg hover:scale-105">
               <h3 className="text-xl font-semibold text-white mb-4">
                 Code Implementation
               </h3>
@@ -75,7 +75,7 @@ const About = () => {
             </div>
 
             {/* Service 3 */}
-            <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg">
+            <div className="bg-[#2a3d41] p-6 rounded-lg shadow-lg hover:scale-105">
               <h3 className="text-xl font-semibold text-white mb-4">
                 Solution Explanation
               </h3>

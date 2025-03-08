@@ -115,7 +115,7 @@ const BlogPage = () => {
             {blogs.map((blog) => (
               <div
                 key={blog.id}
-                className="bg-[#1a2629]  rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300"
+                className="bg-[#1a2629]  rounded-lg shadow-md p-6 hover:scale-105 transition duration-300"
               >
                 <h3 className="text-xl font-bold mb-4 text-white">
                   {blog.title}

@@ -23,7 +23,7 @@ const Services = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Service 1 */}
-            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg">
+            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg hover:scale-105">
               <h3 className="text-xl font-semibold mb-4">
                 DSA & Coding Tutorials
               </h3>
@@ -35,7 +35,7 @@ const Services = () => {
             </div>
 
             {/* Service 2 */}
-            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg">
+            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg hover:scale-105">
               <h3 className="text-xl font-semibold mb-4">
                 Code Implementation
               </h3>
@@ -47,7 +47,7 @@ const Services = () => {
             </div>
 
             {/* Service 3 */}
-            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg">
+            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg hover:scale-105">
               <h3 className="text-xl font-semibold mb-4">
                 Problem-Solving Insights
               </h3>
@@ -58,7 +58,7 @@ const Services = () => {
             </div>
 
             {/* Service 4 */}
-            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg">
+            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg hover:scale-105">
               <h3 className="text-xl font-semibold mb-4">
                 Placement Preparation
               </h3>
@@ -69,7 +69,7 @@ const Services = () => {
             </div>
 
             {/* Service 5 */}
-            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg">
+            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg hover:scale-105">
               <h3 className="text-xl font-semibold mb-4">
                 Technology Training
               </h3>
@@ -80,7 +80,7 @@ const Services = () => {
             </div>
 
             {/* Service 6 */}
-            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg">
+            <div className="bg-[#1a2629] p-6 rounded-lg shadow-lg hover:scale-105">
               <h3 className="text-xl font-semibold mb-4">Career Development</h3>
               <p>
                 Develop soft skills and technical expertise for a successful

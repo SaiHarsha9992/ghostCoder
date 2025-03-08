@@ -62,6 +62,9 @@ export default function Header() {
           <a href="/assistant" className="text-white hover:text-gray-300">
             Assistant
           </a>
+           <a href="/roadmaps" className="text-white hover:text-gray-300">
+            Road Maps
+          </a>
         </div>
 
         {/* User Section */}
@@ -107,6 +110,9 @@ export default function Header() {
           <a href="/" className="block hover:text-gray-300">
             Home
           </a>
+          <a href="/blogs" className="block hover:text-gray-300">
+            Blogs
+          </a>
           <a href="/about" className="block hover:text-gray-300">
             About
           </a>
@@ -118,6 +124,9 @@ export default function Header() {
           </a>
           <a href="/contact" className="block hover:text-gray-300">
             Contact
+          </a>
+           <a href="/roadmaps" className="block hover:text-gray-300">
+            Road Maps
           </a>
         </div>
       )}

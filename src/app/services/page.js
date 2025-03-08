@@ -101,7 +101,7 @@ const Services = () => {
             resources.
           </p>
           <a
-            href="/register"
+            href="/signup"
             className="px-6 py-3 bg-white text-black font-semibold text-lg rounded-lg hover:shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#fff,0_0_15px_#fff,0_0_30px_#fff] transition duration-300"
           >
             Get Started

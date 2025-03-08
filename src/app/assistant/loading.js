@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Loading(){
   return(
      <div className="hidden lg:flex flex-col items-center justify-center text-center space-y-4 relative top-52">

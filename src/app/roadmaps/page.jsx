@@ -49,8 +49,10 @@ export default function RoadmapsPage() {
   const [selectedRoadmap, setSelectedRoadmap] = useState(null);
 
   return (
+  <>
+    <Header/>
     <div className="flex flex-col items-center min-h-screen bg-[#2a3d41] p-4 md:p-6">
-      <Header/>
+      
       <div className="hidden lg:flex flex-col items-center justify-center text-center space-y-4 relative top-2">
         <Image
           src="/ghost (5) (1).png"
@@ -109,7 +111,9 @@ export default function RoadmapsPage() {
           </Dialog.Panel>
         </div>
       </Dialog>
-    <Footer/>
     </div>
+    
+    <Footer/>
+</>
   );
 }

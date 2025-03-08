@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import Image from "next/image";
-
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 const roadmaps = [
   // 🔥 Full Stack Development
   { title: "Full Stack Developer", id: "1gIpK1dtbOlleyCz2Z6LtR-eqVpAWMhHI" },
@@ -49,6 +50,7 @@ export default function RoadmapsPage() {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-[#2a3d41] p-4 md:p-6">
+      <Header/>
       <div className="hidden lg:flex flex-col items-center justify-center text-center space-y-4 relative top-2">
         <Image
           src="/ghost (5) (1).png"
@@ -107,6 +109,7 @@ export default function RoadmapsPage() {
           </Dialog.Panel>
         </div>
       </Dialog>
+    <Footer/>
     </div>
   );
 }

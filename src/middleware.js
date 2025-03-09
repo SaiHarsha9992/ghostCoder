@@ -9,7 +9,8 @@ export async function middleware(req) {
     !token &&
     (req.nextUrl.pathname.startsWith("/blogs") ||
       req.nextUrl.pathname.startsWith("/assistant") ||
-      req.nextUrl.pathname.startsWith("/roadmaps"))
+      req.nextUrl.pathname.startsWith("/roadmaps") ||
+      req.nextUrl.pathname.startsWith("/chat"))
   ) {
     return NextResponse.redirect(new URL("/signin", req.url));
   }
@@ -18,5 +19,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: ["/blogs/:path*", "/assistant/:path*", "/roadmaps/:path*"],
+  matcher: ["/blogs/:path*", "/assistant/:path*", "/roadmaps/:path*", "/chat/:path*"],
 };

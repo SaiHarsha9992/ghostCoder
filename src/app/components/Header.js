@@ -65,6 +65,9 @@ export default function Header() {
            <a href="/roadmaps" className="text-white hover:text-gray-300">
             Road Maps
           </a>
+          <a href="/chat" className="text-white hover:text-gray-300">
+            Chat
+          </a>
         </div>
 
         {/* User Section */}
@@ -127,6 +130,9 @@ export default function Header() {
           </a>
            <a href="/roadmaps" className="block hover:text-gray-300">
             Road Maps
+          </a>
+        <a href="/chat" className="block hover:text-gray-300">
+            Chat
           </a>
         </div>
       )}

@@ -1,4 +1,3 @@
-// src/app/layout.js (Server Component)
 import "./globals.css";
 import { Comfortaa } from "next/font/google";
 import { Metadata } from "next";

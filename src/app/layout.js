@@ -1,8 +1,8 @@
+"use client";
 import { Comfortaa } from "next/font/google";
 import "./globals.css";
-
-const comfortaa = Comfortaa({ weight: "400", subsets: ["latin"] });
-
+import { SessionProvider } from "next-auth/react";
+ 
 export const metadata = {
   title: {
     default: "ghostCoder",
@@ -10,13 +10,15 @@ export const metadata = {
   },
   description: "Learn fast Coding and DSA",
 };
-
+const comfortaa = Comfortaa({ weight: "400", subsets: ["latin"] });
+ 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={comfortaa.className}>
-        {children}
-      </body>
-    </html>
-  );
-}
+   return (
+     <html lang="en">
+       <body className={comfortaa.className}>
+         <SessionProvider>{children}</SessionProvider>
+       </body>
+     </html>
+   );
+ }
+

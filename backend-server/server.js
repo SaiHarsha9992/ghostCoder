@@ -6,10 +6,11 @@ const cors = require("cors");
 const app = express();
 const server = createServer(app);
 
-app.use(cors({ origin: "https://ghost-coderr.vercel.app" }));
+// Enable CORS for frontend connection
+app.use(cors({ origin: "http://localhost:3000" }));
 
 const io = new Server(server, {
-  cors: { origin: "https://ghost-coderr.vercel.app" },
+  cors: { origin: "http://localhost:3000" },
 });
 
 io.on("connection", (socket) => {

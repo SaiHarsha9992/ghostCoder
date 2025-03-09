@@ -1,9 +1,4 @@
-
-import { Comfortaa } from "next/font/google";
-import "./globals.css";
-import { SessionProvider } from "next-auth/react";
-
-const comfortaa = Comfortaa({ weight: "400", subsets: ["latin"] });
+import ClientLayout from "@/components/ClientLayout";
 
 export const metadata = {
   title: {
@@ -16,9 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={comfortaa.className}>
-        <SessionProvider>{children}</SessionProvider>
-      </body>
+      <ClientLayout>{children}</ClientLayout>
     </html>
   );
 }

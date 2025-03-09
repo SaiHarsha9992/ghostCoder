@@ -7,8 +7,11 @@ import SessionProviderWrapper from "./SessionProviderWrapper"; // Import the wra
 const comfortaa = Comfortaa({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
-  title: "GhostCoder",
-  description: "Your go-to platform for learning DSA, coding, and technology for free.",
+  title: {
+    default: "ghostCoder",
+    template: "%s - ghostCoder",
+  },
+  description: "Learn fast Coding and DSA",
 };
 
 export default function RootLayout({ children }) {

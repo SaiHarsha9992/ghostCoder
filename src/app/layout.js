@@ -1,4 +1,3 @@
-"use client";
 
 import { Comfortaa } from "next/font/google";
 import "./globals.css";

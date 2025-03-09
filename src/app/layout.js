@@ -1,4 +1,7 @@
-import ClientLayout from "./components/ClientLayout";
+import { Comfortaa } from "next/font/google";
+import "./globals.css";
+
+const comfortaa = Comfortaa({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
   title: {
@@ -11,7 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ClientLayout>{children}</ClientLayout>
+      <body className={comfortaa.className}>
+        {children}
+      </body>
     </html>
   );
 }

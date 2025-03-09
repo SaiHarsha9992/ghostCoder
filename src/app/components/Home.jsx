@@ -2,8 +2,8 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useForm, ValidationError } from "@formspree/react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 export default function Home() {
   const [showImage, setShowImage] = useState(false);
   const [animateAbout, setAnimateAbout] = useState(false);

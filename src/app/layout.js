@@ -10,7 +10,7 @@ export const metadata = {
     default: "ghostCoder",
     template: "%s - ghostCoder",
   },
-  description: "Learn fast Coding and DSA",
+  description: "Learn fast Coding and DSA and Problem Solving",
 };
 
 export default function RootLayout({ children }) {

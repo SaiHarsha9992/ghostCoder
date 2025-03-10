@@ -92,7 +92,7 @@
          </div>
          {showImage && (
            <button className="mt-auto mb-8 px-6 py-2 text-lg font-semibold text-black bg-white rounded-lg hover:bg-gray-200 transition duration-1300 z-10 animate-rise shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#fff,0_0_15px_#fff,0_0_30px_#fff]">
-             <a href="/blogs">Explore GhostCoder</a>
+             <a href="/blogs">Explore ghostCoder</a>
            </button>
          )}
        </div>

@@ -67,6 +67,7 @@ export default function ChatPage() {
     const msgData = {
       room,
       username: session?.user?.name,
+      userImage: session.user.image,
       message,
     };
 

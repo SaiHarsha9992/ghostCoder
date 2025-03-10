@@ -125,7 +125,9 @@ export default function ChatPage() {
               <div className="h-80 overflow-y-auto p-2 border border-gray-700 rounded-md mb-4">
                 {messages.map((msg, index) => (
                   <div key={index} className="flex items-center gap-2 mb-2">
-                    
+                    {msg.userImage && (
+        <img src={msg.userImage} alt="User" className="w-8 h-8 rounded-full" />
+      )}
                     <strong>{msg.username}:</strong>
                     <span>{msg.message}</span>
                   </div>

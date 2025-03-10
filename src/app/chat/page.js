@@ -42,8 +42,8 @@ export default function ChatPage() {
       console.error("Socket is not connected.");
       return;
     }
-    if (room && session?.user?.name) {
-      socket.emit("joinRoom", { username: session.user.name, room, session?.user?.image });
+    if (room && session?.user?.name && session?.user?.image) {
+      socket.emit("joinRoom", { username: session.user.name, room, session.user.image });
       setJoined(true);
     } else {
       alert("Please enter a room and ensure you're logged in.");

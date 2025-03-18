@@ -58,6 +58,12 @@ const blogs = {
     content:
       "https://docs.google.com/document/d/e/2PACX-1vSg3vuc6G2tFKc8GuHHKagjjA0aUiYn5KSvKq-FeZmw7YLjen64wuhSr5lF9mx1siglsbUTv-qYtkNH/pub?embedded=true",
   },
+"bit_manipulation":{
+    embedFile:
+      "https://docs.google.com/document/d/1v3CXnMYI1jUex02cep2mFDuzN6REcj3IxBiahPrSXww/preview",
+    content:
+      "https://docs.google.com/document/d/e/2PACX-1vQefGuH7Juvbz-TpGVwfB8TKRi4j4svn4HAIEkkTgb0yqk4TRlwhTGnr0K692VZDFhlXlttPsUXr7Ko/pub?embedded=true",
+  },
 };
 
 const BlogPage = () => {

@@ -65,6 +65,13 @@ const BlogPage = () => {
     description:
       "Understand the concept of recursions, how to declare, define, and call them, with examples in Python, C++, and Java.",
     link: "/blogs/recursions",
+  },
+{
+    id: 9,
+    title: "Bit Manipulation",
+    description:
+      "Understand the concept of bit manipulations, how to declare, define, call them and use them, with examples in Python, C++, and Java.",
+    link: "/blogs/bit_manipulation",
   }
 
   ];

@@ -56,7 +56,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/g-kedarinadh-sai-harsha/"
+              href="https://www.linkedin.com/company/ghostcoder/"
               target="_blank"
             >
               <button

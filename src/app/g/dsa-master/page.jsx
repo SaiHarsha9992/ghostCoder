@@ -105,10 +105,19 @@ export default function RoadmapsPage() {
 
           <div className="bg-gray-800 p-4 rounded mt-8 shadow-md">
             <h3 className="text-lg font-semibold mb-2">WHAT'S NEXT?</h3>
-            <p>
-              Once you’ve implemented the above algorithms, solve <a link="https://ghost-coderr.vercel.app/g/interview-master-100">Interview Master 100</a> — a curated list of 100 top problems that build upon each other to enhance your mastery.
-            </p>
-          </div>
+           <p>
+  Once you’ve implemented the above algorithms, solve{" "}
+  <a
+    href="https://ghost-coderr.vercel.app/g/interview-master-100"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-400 underline hover:text-blue-300 transition"
+  >
+    Interview Master 100
+  </a>{" "}
+  — a curated list of 100 top problems that build upon each other to enhance your mastery.
+</p>
+
 
          
 

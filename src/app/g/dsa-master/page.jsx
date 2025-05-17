@@ -128,7 +128,7 @@ export default function RoadmapsPage() {
             <p><strong>Harsha + Shanmukh + Siva</strong></p>
             <p className="mt-4">Our platform is constantly evolving to ensure that learners have access to the latest technologies, coding languages, and career skills. We aim to help you succeed in both your learning journey and your future career.</p>
             
-            <p className="mt-2">Credits: InstaByte.</p>
+            <p className="mt-2">Credits: InstaByte</p>
           </div>
         </section>
       </main>

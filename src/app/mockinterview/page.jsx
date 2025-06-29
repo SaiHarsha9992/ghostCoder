@@ -6,6 +6,7 @@ export default function Page() {
       <iframe
         src="https://smart-meet-smoky.vercel.app/"
         className="w-full h-full border-none"
+        allow="camera; microphone; fullscreen; clipboard-read; clipboard-write"
         allowFullScreen
       />
     </div>

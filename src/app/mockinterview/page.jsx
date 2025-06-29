@@ -1,5 +1,13 @@
-import { redirect } from 'next/navigation';
+"use client";
 
 export default function Page() {
-  redirect('https://smart-meet-smoky.vercel.app/');
+  return (
+    <div className="w-full h-screen">
+      <iframe
+        src="https://smart-meet-smoky.vercel.app/"
+        className="w-full h-full border-none"
+        allowFullScreen
+      />
+    </div>
+  );
 }

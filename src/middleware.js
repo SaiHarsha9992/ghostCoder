@@ -10,7 +10,7 @@ export async function middleware(req) {
     (req.nextUrl.pathname.startsWith("/blogs") ||
       req.nextUrl.pathname.startsWith("/assistant") ||
       req.nextUrl.pathname.startsWith("/roadmaps") ||
-      req.nextUrl.pathname.startsWith("/chat")) ||
+      req.nextUrl.pathname.startsWith("/chat") ||
       req.nextUrl.pathname.startsWith("/online-compiler"))
   ) {
     return NextResponse.redirect(new URL("/signin", req.url));

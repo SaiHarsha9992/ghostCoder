@@ -50,11 +50,11 @@ export default function Header() {
           <a href="/about" className="text-white hover:text-gray-300">
             About
           </a>
-          <a href="/services" className="text-white hover:text-gray-300">
-            Services
-          </a>
           <a href="/contact" className="text-white hover:text-gray-300">
             Contact
+          </a>
+          <a href="/online-compiler" className="text-white hover:text-gray-300">
+            Compiler
           </a>
           <a href="/blogs" className="text-white hover:text-gray-300">
             Blogs
@@ -119,14 +119,14 @@ export default function Header() {
           <a href="/about" className="block hover:text-gray-300">
             About
           </a>
-          <a href="/services" className="block hover:text-gray-300">
-            Services
+          <a href="/contact" className="text-white hover:text-gray-300">
+            Contact
+          </a>
+          <a href="/online-compiler" className="text-white hover:text-gray-300">
+            Compiler
           </a>
           <a href="/assistant" className="block hover:text-gray-300">
             Assistant
-          </a>
-          <a href="/contact" className="block hover:text-gray-300">
-            Contact
           </a>
            <a href="/roadmaps" className="block hover:text-gray-300">
             Road Maps

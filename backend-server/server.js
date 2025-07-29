@@ -6,10 +6,17 @@ const cors = require("cors");
 const app = express();
 const server = createServer(app);
 
-app.use(cors({ origin: "https://ghost-coderr.vercel.app" }));
- 
+const allowedOrigins = [
+  "https://ghost-coderr.vercel.app",
+  "http://localhost:8080"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
  const io = new Server(server, {
-   cors: { origin: "https://ghost-coderr.vercel.app" },
+   cors: { origin: allowedOrigins },
  });
 
 io.on("connection", (socket) => {

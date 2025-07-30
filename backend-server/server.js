@@ -9,6 +9,7 @@ const server = createServer(app);
 const allowedOrigins = [
   "https://ghost-coderr.vercel.app",
   "http://localhost:8080",
+  "https://unicorn-secrets.lovable.app/",
   "https://preview--unicorn-secrets.lovable.app/"
 ];
 

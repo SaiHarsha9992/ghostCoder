@@ -9,17 +9,27 @@ const server = createServer(app);
 const allowedOrigins = [
   "https://ghost-coderr.vercel.app",
   "http://localhost:8080",
-  "https://unicorn-secrets.lovable.app/",
-  "https://preview--unicorn-secrets.lovable.app/"
+  "https://unicorn-secrets.lovable.app",
+  "https://preview--unicorn-secrets.lovable.app"
 ];
 
+// Enable CORS for Express
 app.use(cors({
   origin: allowedOrigins,
   credentials: true,
 }));
- const io = new Server(server, {
-   cors: { origin: allowedOrigins },
- });
+const io = new Server(server, {
+  cors: {
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  },
+});
 
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);

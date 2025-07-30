@@ -8,7 +8,8 @@ const server = createServer(app);
 
 const allowedOrigins = [
   "https://ghost-coderr.vercel.app",
-  "http://localhost:8080"
+  "http://localhost:8080",
+  "https://preview--unicorn-secrets.lovable.app/"
 ];
 
 app.use(cors({

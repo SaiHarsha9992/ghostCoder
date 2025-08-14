@@ -5,7 +5,6 @@ const cors = require("cors");
 
 const app = express();
 const server = createServer(app);
-
 const allowedOrigins = [
   "https://ghost-coderr.vercel.app",
   "http://localhost:8080",
@@ -32,47 +31,74 @@ const io = new Server(server, {
   },
 });
 
-io.on("connection", (socket) => {
-  console.log("User connected:", socket.id);
+const users = {};
 
-  // Join room
+io.on("connection", (socket) => {
+  console.log("New WS Connection:", socket.id);
+
+  // ---- Store users in memory ----
   socket.on("joinRoom", ({ username, room, userImage }) => {
     socket.join(room);
-    socket.username = username;
-    socket.room = room;
-    socket.userImage = userImage || "/ghost (6) (1).png"; // Default image
+    users[socket.id] = { username, room, userImage: userImage || "/ghost.png" };
 
-    io.to(room).emit("message", {
-      username: "System",
-      message: `${username} joined the room`,
-      userImage: null, // System messages don't need an image
+    // Welcome to user
+    socket.emit("message", {
+      username: "Server",
+      message: `Welcome to room ${room}, ${username}!`,
     });
+
+    // Notify others
+    socket.broadcast.to(room).emit("message", {
+      username: "Server",
+      message: `${username} has joined the chat`,
+    });
+
+    // ✅ Send updated members list
+    const roomUsers = Object.values(users).filter((u) => u.room === room);
+    io.to(room).emit("roomUsers", { room, users: roomUsers });
   });
 
-  // Chat messages
   socket.on("chatMessage", ({ room, username, message, userImage }) => {
     io.to(room).emit("message", {
       username,
       message,
-      userImage: userImage || "/ghost (6) (1).png", // Fallback if no image
+      userImage: userImage || "/ghost.png",
     });
   });
 
-  // Leave room
   socket.on("leaveRoom", () => {
-    if (socket.room) {
-      io.to(socket.room).emit("message", {
-        username: "System",
-        message: `${socket.username} left the room`,
-        userImage: null,
+    const user = users[socket.id];
+    if (user) {
+      const { room, username } = user;
+      delete users[socket.id];
+      socket.leave(room);
+
+      io.to(room).emit("message", {
+        username: "Server",
+        message: `${username} has left the chat`,
       });
-      socket.leave(socket.room);
-      socket.room = null;
+
+      // ✅ Update members list
+      const roomUsers = Object.values(users).filter((u) => u.room === room);
+      io.to(room).emit("roomUsers", { room, users: roomUsers });
     }
   });
 
-  // Handle disconnection
   socket.on("disconnect", () => {
+    const user = users[socket.id];
+    if (user) {
+      const { room, username } = user;
+      delete users[socket.id];
+
+      io.to(room).emit("message", {
+        username: "Server",
+        message: `${username} has disconnected`,
+      });
+
+      // ✅ Update members list
+      const roomUsers = Object.values(users).filter((u) => u.room === room);
+      io.to(room).emit("roomUsers", { room, users: roomUsers });
+    }
     console.log(`User disconnected: ${socket.id}`);
   });
 });
@@ -82,5 +108,6 @@ const PORT = 4000;
 server.listen(PORT, () => {
   console.log(`Socket.IO Server running on http://localhost:${PORT}`);
 });
+
 
 

@@ -38,25 +38,30 @@ io.on("connection", (socket) => {
 
   // ---- Store users in memory ----
   socket.on("joinRoom", ({ username, room, userImage }) => {
-    socket.join(room);
-    users[socket.id] = { username, room, userImage: userImage || "/ghost.png" };
+  socket.join(room);
+  users[socket.id] = { username, room, userImage: userImage || "/ghost.png" };
 
-    // Welcome to user
-    socket.emit("message", {
-      username: "ghostCoder",
-      message: `Welcome to room ${room}, ${username}!`,
-    });
+  const roomName = room;
+  const roomUniqueCode = `${room}-${socket.id.slice(0, 6)}`; // just an example unique code
 
-    // Notify others
-    socket.broadcast.to(room).emit("message", {
-      username: "ghostCoder",
-      message: `${username} has joined the chat`,
-    });
-
-    // ✅ Send updated members list
-    const roomUsers = Object.values(users).filter((u) => u.room === room);
-    io.to(room).emit("roomUsers", { room, users: roomUsers });
+  // Welcome to user
+  socket.emit("message", {
+    username: "ghostCoder",
+    message: `Welcome to room ${room}, ${username}!`,
   });
+
+  socket.emit("roomInfo", { roomName, roomUniqueCode });
+
+  // Notify others
+  socket.broadcast.to(room).emit("message", {
+    username: "ghostCoder",
+    message: `${username} has joined the chat`,
+  });
+
+  // ✅ Send updated members list
+  const roomUsers = Object.values(users).filter((u) => u.room === room);
+  io.to(room).emit("roomUsers", { room, users: roomUsers });
+});
 
   socket.on("chatMessage", ({ room, username, message, userImage }) => {
     io.to(room).emit("message", {
@@ -107,6 +112,7 @@ const PORT = 4000;
 server.listen(PORT, () => {
   console.log(`Socket.IO Server running on http://localhost:${PORT}`);
 });
+
 
 
 

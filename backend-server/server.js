@@ -37,30 +37,37 @@ io.on("connection", (socket) => {
   console.log("New WS Connection:", socket.id);
 
   // ---- Store users in memory ----
-  socket.on("joinRoom", ({ username, room, userImage }) => {
-  socket.join(room);
-  users[socket.id] = { username, room, userImage: userImage || "/ghost.png" };
+ socket.on("joinRoom", ({ username, roomName, roomUniqueCode, userImage }) => {
+  // Decide what to use as the actual room identifier
+  const roomId = roomUniqueCode || roomName;
 
-  const roomName = room;
-  const roomUniqueCode = `${room}-${socket.id.slice(0, 6)}`; // just an example unique code
+  socket.join(roomId);
+
+  users[socket.id] = {
+    username,
+    roomName: roomName || roomUniqueCode, // keep both if needed
+    roomUniqueCode,
+    userImage: userImage || "/ghost.png",
+  };
 
   // Welcome to user
   socket.emit("message", {
     username: "ghostCoder",
-    message: `Welcome to room ${room}, ${username}!`,
+    message: `Welcome to room ${roomName || roomUniqueCode}, ${username}!`,
   });
 
+  // Send back proper room info
   socket.emit("roomInfo", { roomName, roomUniqueCode });
 
   // Notify others
-  socket.broadcast.to(room).emit("message", {
+  socket.broadcast.to(roomId).emit("message", {
     username: "ghostCoder",
     message: `${username} has joined the chat`,
   });
 
-  // ✅ Send updated members list
-  const roomUsers = Object.values(users).filter((u) => u.room === room);
-  io.to(room).emit("roomUsers", { room, users: roomUsers });
+  // ✅ Update members list
+  const roomUsers = Object.values(users).filter((u) => u.roomUniqueCode === roomUniqueCode);
+  io.to(roomId).emit("roomUsers", { roomName, roomUniqueCode, users: roomUsers });
 });
 
   socket.on("chatMessage", ({ room, username, message, userImage }) => {
@@ -112,6 +119,7 @@ const PORT = 4000;
 server.listen(PORT, () => {
   console.log(`Socket.IO Server running on http://localhost:${PORT}`);
 });
+
 
 
 

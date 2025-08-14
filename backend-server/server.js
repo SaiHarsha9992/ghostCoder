@@ -32,24 +32,27 @@ const io = new Server(server, {
 });
 
 const users = {};
+const SYSTEM_USERNAME = "ghostCoder";
+const SYSTEM_IMAGE = "/ghost (6) (1).png"; // <-- put your image file in /public or CDN
 
 io.on("connection", (socket) => {
   console.log("New WS Connection:", socket.id);
 
-  // ---- Store users in memory ----
   socket.on("joinRoom", ({ username, room, userImage }) => {
     socket.join(room);
     users[socket.id] = { username, room, userImage: userImage || "/ghost.png" };
 
-    // Welcome to user
+    // ✅ System welcome message
     socket.emit("message", {
-      username: "Server",
+      username: SYSTEM_USERNAME,
+      userImage: SYSTEM_IMAGE,
       message: `Welcome to room ${room}, ${username}!`,
     });
 
-    // Notify others
+    // ✅ Notify others
     socket.broadcast.to(room).emit("message", {
-      username: "Server",
+      username: SYSTEM_USERNAME,
+      userImage: SYSTEM_IMAGE,
       message: `${username} has joined the chat`,
     });
 
@@ -74,7 +77,8 @@ io.on("connection", (socket) => {
       socket.leave(room);
 
       io.to(room).emit("message", {
-        username: "Server",
+        username: SYSTEM_USERNAME,
+        userImage: SYSTEM_IMAGE,
         message: `${username} has left the chat`,
       });
 
@@ -91,7 +95,8 @@ io.on("connection", (socket) => {
       delete users[socket.id];
 
       io.to(room).emit("message", {
-        username: "Server",
+        username: SYSTEM_USERNAME,
+        userImage: SYSTEM_IMAGE,
         message: `${username} has disconnected`,
       });
 
@@ -108,6 +113,7 @@ const PORT = 4000;
 server.listen(PORT, () => {
   console.log(`Socket.IO Server running on http://localhost:${PORT}`);
 });
+
 
 
 

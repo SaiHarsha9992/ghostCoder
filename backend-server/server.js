@@ -7,6 +7,7 @@ const app = express();
 const server = createServer(app);
 const allowedOrigins = [
   "https://ghost-coderr.vercel.app",
+  "https://www.ghost-coder.tech",
   "http://localhost:8080",
   "http://localhost:3000",
   "https://unicorn-secrets.lovable.app",
@@ -119,6 +120,7 @@ const PORT = 4000;
 server.listen(PORT, () => {
   console.log(`Socket.IO Server running on http://localhost:${PORT}`);
 });
+
 
 
 
